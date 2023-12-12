@@ -37,7 +37,7 @@ export default async function SlugPage({ params }: { params: { slug: string } })
                 </div>
                 <div className="flex flex-col gap-2">
                     <span className="font-medium">Check out my vlog:</span>
-                    <YoutubePlayer videoId="Drc7BkaiEpE" />
+                    <YoutubePlayer videoId={data.youtube} />
                 </div>
             </div>
         </>
