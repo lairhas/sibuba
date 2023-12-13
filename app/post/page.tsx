@@ -22,10 +22,10 @@ export default async function Post() {
     }
     return (
         <>
-            <div className="flex flex-col px-6 py-16 xl:px-12 xl:py-20 text-[#212427] gap-y-5 mx-auto min-h-screen">
+            <div className="flex flex-col px-6 py-16 xl:px-12 xl:py-20 text-[#212427] gap-y-5 min-h-screen">
                 <span className="text-center text-3xl font-bold border-b p-4">All post</span>
                 {data.map((item: any) => (
-                    <Link href={`/post/${item.slug.current}`} className="flex flex-col gap-1 p-4 group w-[720px]" prefetch>
+                    <Link href={`/post/${item.slug.current}`} className="flex flex-col gap-1 p-4 group max-w-[720px] mx-auto" prefetch>
                         <span className="text-center text-xl font-bold group-hover:underline">{item.title}</span>
                         <span className="text-center text-xs font-light">{new Date(item._createdAt).toISOString().split("T")[0]}</span>
                     </Link>
